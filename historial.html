@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Datos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Historial de Datos</h1>
+        <div id="historial">
+            <!-- Aquí se mostrará el historial de datos -->
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var historial = JSON.parse(localStorage.getItem('historial')) || [];
+            var historialDiv = document.getElementById('historial');
+            
+            if (historial.length === 0) {
+                historialDiv.innerHTML = '<p>No hay datos en el historial</p>';
+            } else {
+                var historialHTML = '<ul>';
+                historial.forEach(function(item) {
+                    historialHTML += '<li>' + item + '</li>';
+                });
+                historialHTML += '</ul>';
+                historialDiv.innerHTML = historialHTML;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstadisTIC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Tablas de Frecuencia</h1>
+        <h2>PRECO-TEAM</h2>
+        <a href="historial.html" class="historial-link">Historial</a> <!-- Nuevo enlace -->
+        <input type="text" id="inputValues" placeholder="Ingrese los valores separados por comas">
+        <button onclick="calcularTabla()">Calcular</button>
+
+        <div>
+            <label for="roundAmplitud">Redondear Amplitud:</label>
+            <select id="roundAmplitud">
+                <option value="false">No</option>
+                <option value="true">Sí</option>
+            </select>
+        </div>
+
+        <h2>Tabla de Frecuencia para datos no agrupados</h2>
+        <table id="tablaFrecuencia">
+            <thead>
+                <tr>
+                    <th>Xi</th>
+                    <th>Frecuencia Absoluta</th>
+                    <th>Frecuencia Relativa (fi)</th>
+                    <th>Frecuencia Absoluta Acumulada</th>
+                    <th>Frecuencia Relativa Acumulada</th>
+                </tr>
+            </thead>
+            <tbody id="tablaBody">
+                
+            </tbody>
+        </table>
+
+        <h2>Distribución de Frecuencias de datos agrupados</h2>
+        <p>Número de clases: <span id="numClases"></span></p>
+        <p>Rango: <span id="rango"></span></p>
+        <p>Amplitud: <span id="amplitud"></span></p>
+
+        <table id="tablaFrecuenciaAgrupada">
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Marca de Clase</th>
+                    <th>Frecuencia Absoluta</th>
+                    <th>Frecuencia Relativa (%)</th>
+                    <th>Frecuencia Absoluta Acumulada</th>
+                    <th>Frecuencia Relativa Acumulada (%)</th>
+                </tr>
+            </thead>
+            <tbody id="tablaBodyAgrupada">
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

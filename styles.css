@@ -1,0 +1,60 @@
+body {
+    background-color: black;
+    font-family: 'Agency FB', sans-serif;
+    color: #00FF9B;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+input[type="text"],
+button {
+    font-family: 'Agency FB', sans-serif;
+    color: black;
+}
+
+button {
+    background-color: aquamarine;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7FFFD4; /* Cambio de color al pasar el ratón */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #00FF9B;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #00FF9B;
+    color: black;
+}
+/* Estilos CSS adicionales para el enlace de Historial */
+.historial-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #00FF9B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.historial-link:hover {
+    color: #7FFFD4;
+}
